@@ -14,7 +14,7 @@ const output = function(){
     // disable the the player's input while the button play is clicked
     // Set a print to show the Player's turn
     document.querySelector('#tictactoe').textContent = "";
-    document.querySelector("#print").textContent = "Player1's turn";
+    document.querySelector("#print").textContent = "Player 1' s turn!";
 
     //iterate to get the boxes from 1 to 9 with ID from b1 to b9
     //Append them as input elements to the section tag with the tictactoe ID
@@ -31,16 +31,16 @@ const output = function(){
         // The id print is a reference for the Players' turn
         // disable the box while clicked
         const update = function(){
-            if (document.querySelector("#print").innerHTML == "Player1's turn"){
+            if (document.querySelector("#print").innerHTML == "Player 1' s turn!"){
                 document.querySelector("#" + id).value = "X";
                 document.querySelector("#" + id).style.color = player1.color;
                 document.querySelector("#" + id).disabled = true;
-                document.querySelector('#print').innerHTML = "Player2's turn";
-            }else if(document.querySelector("#print").innerHTML == "Player2's turn") {
+                document.querySelector('#print').innerHTML = "Player 2' s turn!";
+            }else if(document.querySelector("#print").innerHTML == "Player 2' s turn!") {
                 document.querySelector('#'+id).value = "O";
                 document.querySelector("#" + id).style.color = player2.color;
                 document.querySelector("#" + id).disabled = true;
-                document.querySelector('#print').innerHTML = "Player1's turn";
+                document.querySelector('#print').innerHTML = "Player 1' s turn!";
             }
         }
 
@@ -77,7 +77,7 @@ const output = function(){
                         document.querySelector("#b"+i).disabled = true;
                     }
                 document.querySelector("#" + id).textContent = "X";
-                window.alert('Player 1 won');
+                document.querySelector('#print').innerHTML = "Player 1 won!";
             }
             else if ((b1 == "O" && case1) || (b1 == "O" && case2) || 
             (b1 == "O" && case3) || (b2 == "O" && case4) || 
@@ -88,7 +88,7 @@ const output = function(){
                         document.querySelector("#b"+i).disabled = true;
                     }
                 document.querySelector("#" + id).textContent = "O";
-                window.alert('Player 2 won');
+                document.querySelector('#print').innerHTML = "Player 2 won!";
             }
             else if ((b1 == "X" || b1 == "O") && (b2 == "X"
                 || b2 == "O") && (b3 == "X" || b3 == "O") &&
@@ -96,8 +96,8 @@ const output = function(){
                 b5 == "O") && (b6 == "X" || b6 == "O") &&
                 (b7 == "X" || b7 == "O") && (b8 == "X" ||
                 b8 == "O") && (b9 == "X" || b9 == "O")) {
-                
-                    window.alert('Draw');
+
+                    document.querySelector('#print').innerHTML = "Draw!";
                 }
 
         }
